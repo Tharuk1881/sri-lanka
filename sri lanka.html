@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Lanka Explorer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#2C3E50',
+                        'brand-green': '#27AE60',
+                        'brand-accent': '#3498DB'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 font-sans text-brand-blue">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <header class="py-12 text-center">
+            <h1 class="text-5xl font-bold text-brand-blue mb-4">Sri Lanka Explorer</h1>
+            <p class="text-xl text-gray-600">Discovering the Pearl of the Indian Ocean</p>
+        </header>
+
+        <main class="space-y-8">
+            <section class="bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-semibold text-brand-green mb-4">About Sri Lanka</h2>
+                <p class="text-lg leading-relaxed">
+                    An island nation with over 2,500 years of history, Sri Lanka is a vibrant tapestry of cultures, landscapes, and traditions. Located in the Indian Ocean, it offers a unique blend of natural beauty, rich heritage, and diverse experiences.
+                </p>
+            </section>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <section class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-brand-accent mb-3">Geography</h3>
+                    <ul class="space-y-2">
+                        <li>🏞️ Area: 65,610 sq km</li>
+                        <li>🌴 Landscape: Tropical rainforests, mountains, beaches</li>
+                        <li>🍃 Famous for: Tea plantations, national parks</li>
+                    </ul>
+                </section>
+
+                <section class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-brand-accent mb-3">Quick Facts</h3>
+                    <ul class="space-y-2">
+                        <li>🏛️ Capital: Sri Jayawardenepura Kotte</li>
+                        <li>👥 Population: ~22 million</li>
+                        <li>🗣️ Languages: Sinhala, Tamil</li>
+                        <li>💰 Currency: Sri Lankan Rupee</li>
+                    </ul>
+                </section>
+            </div>
+
+            <section class="bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-semibold text-brand-green mb-4">Cultural Mosaic</h2>
+                <p class="text-lg leading-relaxed">
+                    A multicultural society with Buddhism at its core, Sri Lanka embraces Sinhalese, Tamil, Muslim, and other ethnic groups. Despite historical challenges, the country has emerged as a resilient and welcoming destination.
+                </p>
+            </section>
+        </main>
+
+        <footer class="py-8 text-center text-gray-600">
+            <p>© 2024 Sri Lanka Explorer | Discover. Experience. Understand.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.addEventListener('mouseenter', () => {
+                    section.classList.add('transform', 'scale-105', 'transition', 'duration-300');
+                });
+                section.addEventListener('mouseleave', () => {
+                    section.classList.remove('transform', 'scale-105', 'transition', 'duration-300');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
